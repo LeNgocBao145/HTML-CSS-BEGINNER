@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Handler the error of image background -->
+    <style>
+        div {
+            width: 300px;
+            height: 500px;
+            /* If first url is error website will take the second url */
+            /* If you use attribute onerror the error image will not show. You can just use background-image solution*/
+            background-image: url('https://eric.edu.vn/public/upload/2024/12/anh-gai-xinh-lop-10-01.webp'), url('./img/error_img.png');
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <!-- Handler the error of image -->
+    <!-- <img onerror="this.src='./img/error_img.png'" src="./img/test.jpg" alt=""> -->
+    <div></div>
+</body>
+</html>

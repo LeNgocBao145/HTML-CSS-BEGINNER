@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image srcset attribute</title>
+
+    <!-- 
+    ## Trang web sử dụng ít hình ảnh (Tốc độ tải trang không bị ảnh hưởng nhiều bởi hình ảnh)
+        Tối ưu sử dụng hình ảnh trên trang web?
+
+        1. Sử dụng định dạng ảnh phù hợp?
+            - Hình học, vector, v.v: SVG
+            - Bitmap transparent: PNG, WEBP
+            - Bitmap không transparent: JPEG, WEBP
+        2. Nén hình ảnh (giảm dung lượng)
+            - https://tinypng.com/
+        3. Sử dụng kích thước ảnh phù hợp?
+            - Original: 4000px x 4000px, Figma: 800px x 800px (CSS), 
+            Resize: 1600px x 1600px (2x), đáp ứng tốt cho cả màn hình PPI/DPI cao (retina)
+            - PPI (Pixel per inch), DPI (Dots per inch): 100 DPI, 300 DPI
+        Loại màn hình:
+
+        1. Màn hình thường (DPI thấp - 1:1): 800px x 800px ✅ , 1600px x 1600px ❌
+        2. Màn hình retina (DPI cao - 2:1): 800px x 800px ❌ , 1600px x 1600px ✅
+    ## Trang web sử dụng nhiều hình ảnh
+        Thiết bị:
+            1. Mobile: 1600px x 1600px ❌ => Tốn băng thông, chờ lâu hơn => Giảm trải nghiệm 😫
+            2. Tablet: 1600px x 1600px ❌
+            3. Desktop: 1600px x 1600px ✅
+    ## Bài toán 1
+        1. Mobile: 100px x 100px
+        2. Tablet: 200px x 200px
+        3. Desktop: 400px x 400px
+
+    ## Bài toán 2
+        1. Desktop: 200px x 200px
+
+    ## Bài toán 3
+        1. Desktop: img-large.jpg
+        2. Mobile: img-small.jpg
+    -->
+</head>
+<!-- Truy cập https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Responsive_images -->
+
+<body>
+    <!-- Resolution switching: Different sizes -->
+    <!-- <img srcset="./img/avatar-100x100.jpg 100w, ./img/avatar-200x200.jpg 200w, ./img/avatar-400x400.jpg 400w" 
+        sizes="(max-width: 573px) 100px, (max-width: 922px) 200px, 400px"
+        src="./img/avatar-400x400.jpg" alt="Elva dressed as a fairy" /> -->
+    <!-- Resolution switching: Same size, different resolutions -->
+    <!-- <img srcset="./img/avatar-200x200.jpg 1x, ./img/avatar-400x400.jpg 2x" src="./img/avatar-400x400.jpg"
+        alt="Elva dressed as a fairy" /> -->
+
+    <!-- Art direction -->
+    <picture>
+        <source media="(max-width: 500px)" srcset="./img/img-small.jpg" />
+        <img style="width: 100%;" src="./img/img-large.jpg" alt="Chris standing up holding his daughter Elva" />
+    </picture>
+
+</body>
+
+</html>
