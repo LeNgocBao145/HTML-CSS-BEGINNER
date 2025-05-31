@@ -310,3 +310,90 @@ html {
 #footer {
 
 }
+
+.modal {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-container {
+    background-color: #fff;
+    width: 900px;
+    min-height: 200px;
+    position: relative;
+
+}
+
+.modal-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 12px;
+    cursor: pointer;
+    color: #fff;
+    opacity: 0.6;
+}
+
+.modal-close:hover {
+    opacity: 1;
+}
+
+.modal-header {
+    background-color: #009688;
+    padding: 32px 16px;
+    color: #fff;
+    text-align: center;
+}
+
+.modal-heading-icon.ti-briefcase{
+    padding-right: 12px;
+}
+
+.modal-header h2 {
+    margin: 10px 0px;
+    font-weight: 400;
+    font-size: 30px;
+    letter-spacing: 4px;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.modal-body {
+    display: block;
+}
+
+.modal-label {
+    display: block;
+}
+
+#modal-button {
+    background-color: #009688;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    text-transform: uppercase;
+    border: none;
+    padding: 16px;
+    margin: 16px 0px;
+}
+
+#modal-button:hover {
+    opacity: 0.6;
+}
+
+.modal-footer {
+    margin: 15px 0px;
+    float: right;
+}
+
+.modal-footer a {
+    text-decoration: none;
+    color: #2196F3;
+}
