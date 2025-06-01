@@ -317,7 +317,8 @@ html {
     top: 0;
     bottom: 0;
     position: fixed;
-    display: flex;
+    /* display: flex; */
+    display: none; /* Hidden by default */
     justify-content: center;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.5);
@@ -366,10 +367,20 @@ html {
 
 .modal-body {
     display: block;
+    padding: 0px 16px;
 }
 
 .modal-label {
     display: block;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.modal-input {
+    border: 1px solid #ccc;
+    padding: 8px;
+    width: 100%;
+    font-size: 15px;
 }
 
 #modal-button {
@@ -390,10 +401,11 @@ html {
 
 .modal-footer {
     margin: 15px 0px;
+    margin-bottom: 31px;
+    padding: 0px 16px;
     float: right;
 }
 
 .modal-footer a {
-    text-decoration: none;
     color: #2196F3;
 }
