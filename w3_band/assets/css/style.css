@@ -5,6 +5,7 @@
     box-sizing: border-box;
 }
 
+/* Common */
 .clear {
     clear: both;
 }
@@ -16,6 +17,54 @@
 html {
     font-family: Arial, Helvetica, sans-serif;
 }
+
+.open {
+    display: flex !important; /* Show the modal */
+}
+
+.row {
+    margin-left: -16px;
+    margin-right: -16px;
+}
+
+.col {
+    padding-left: 8px;
+    padding-right: 8px;
+    float: left;
+}
+
+.col-full {
+    width: 100%;
+}
+
+.col-double {
+    width: 50%;
+}
+
+.col-triple {
+    width: 33.33333%;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.button {
+    color: #fff;
+    text-decoration: none;
+    background-color: #000;
+    padding: 8px 16px;
+    margin-bottom: 16px;
+    margin-top: 0px;
+    display: inline-block;
+    border: none;
+}
+
+.button:hover {
+    background-color: #757575;
+}
+
+/* Main */
 
 #main {
    
@@ -185,12 +234,6 @@ html {
     padding: 32px 0px;
 }
 
-#content .member-item {
-    float: left;
-    width: calc(100% / 3);
-    text-align: center;
-}
-
 #content .member-name {
     font-size: 15px;
     margin: 15px;
@@ -204,6 +247,8 @@ html {
 #content .tour-section {
     background-color: #000;
 }
+
+
 
 /* #content .tour-section .section-heading,
 #content .tour-section .section-subheading {
@@ -245,13 +290,9 @@ html {
 
 .place-list {
     padding: 32px 8px;
-    margin: 0px -16px;
 }
 
 .place-item {
-    float: left;
-    width: 33.33333%;
-    padding: 0px 8px;
     margin-bottom: 16px;
 }
 
@@ -273,7 +314,7 @@ html {
 
 .place-date,
 .place-description,
-.place-buy-button {
+.button {
     font-size: 15px;
     font-family: "Lato", sans-serif;
     margin: 15px 0px;
@@ -293,26 +334,39 @@ html {
     line-height: 1.4;
 }
 
-.place-buy-button {
-    color: #fff;
-    text-decoration: none;
-    background-color: #000;
-    padding: 8px 16px;
-    margin-bottom: 16px;
-    margin-top: 0px;
-    display: inline-block;
+/* Map Section */
+.map-section img {
+    width: 100%;
+    filter: grayscale(50%);
 }
 
-.place-buy-button:hover {
-    background-color: #757575;
-}
-
+/* Footer */
 #footer {
-
+    padding: 64px 16px;
+    text-align: center;
+    font-size: 20px;
+    font-family: "Lato", sans-serif;
 }
 
-.open {
-    display: flex !important; /* Show the modal */
+#footer .social-list a:hover {
+    opacity: 0.3;
+}
+
+#footer .social-list a {
+    color: #000;
+    text-decoration: none;
+    opacity: 0.6;
+}
+
+#footer .copyright {
+    font-size: 15px;
+    margin: 15px 0px;
+    opacity: 0.6;
+}
+
+#footer .copyright a {
+    color: #000;
+    
 }
 
 .modal {
